@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(172, 19, 134);
+    text-decoration: wavy;
+    background-color: palevioletred;
+    
+}
+button{
+    color: rgb(0, 17, 255);
+    text-transform: uppercase;
+    text-size-adjust:10;
+    background-color: rgb(141, 130, 32);
+}
+body{
+    background-color: cyan;
+}

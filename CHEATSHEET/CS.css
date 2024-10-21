@@ -1,0 +1,224 @@
+/* CSS Basics Cheatsheet */
+
+/* ===== Selectors ===== */
+
+/* Select by element tag */
+element {
+    /* Target all instances of the specified HTML element */
+    /* Example: p, h1, div */
+    color: #333;
+  }
+  
+  /* Select by class */
+  .classname {
+    /* Target elements with the specified class attribute */
+    /* Example: .button, .container */
+    background-color: #f0f0f0;
+  }
+  
+  /* Select by ID */
+  #idname {
+    /* Target the element with the specific ID */
+    /* Example: #header, #footer */
+    border: 2px solid #000;
+  }
+  
+  /* Group selectors */
+  element1, element2, .classname {
+    /* Apply the same styles to multiple selectors */
+    /* Example: p, h1, .intro */
+    margin: 10px 0;
+  }
+  
+  /* Descendant selector */
+  parent element {
+    /* Target elements that are descendants of the specified parent */
+    /* Example: div p (all p inside div) */
+    padding: 10px;
+  }
+  
+  /* Child selector */
+  parent > child {
+    /* Target direct children of the specified parent element */
+    /* Example: ul > li (direct li inside ul) */
+    color: #333;
+  }
+  
+  /* Adjacent sibling selector */
+  element1 + element2 {
+    /* Target the element that immediately follows the first element */
+    /* Example: h1 + p (first p after h1) */
+    margin-top: 20px;
+  }
+  
+  /* General sibling selector */
+  element1 ~ element2 {
+    /* Target all siblings that follow the first element */
+    /* Example: h1 ~ p (all p after h1) */
+    color: #555;
+  }
+  
+  /* ===== Box Model ===== */
+  
+  /* The box model consists of content, padding, border, and margin */
+  element {
+    /* Content area */
+    width: 100px;  /* The width of the content area */
+    height: 100px; /* The height of the content area */
+  
+    /* Padding (inside space between content and border) */
+    padding: 10px; /* Space inside the element, around the content */
+  
+    /* Border (line surrounding the padding and content) */
+    border: 2px solid #000; /* Border width, style, and color */
+  
+    /* Margin (outside space between the element and others) */
+    margin: 20px; /* Space outside the element, around the border */
+  
+    /* Box sizing */
+    box-sizing: border-box; /* Includes padding and border in width/height */
+  }
+  
+  /* ===== Colors ===== */
+  
+  /* Set text color */
+  element {
+    color: #333; /* Change the text color */
+  }
+  
+  /* Set background color */
+  element {
+    background-color: #f0f0f0; /* Change the background color */
+  }
+  
+  /* Set border color */
+  element {
+    border: 2px solid #333; /* Change the border color */
+  }
+  
+  /* ===== Text ===== */
+  
+  element {
+    /* Font family */
+    font-family: 'Arial', sans-serif; /* Specify the font */
+  
+    /* Font size */
+    font-size: 16px; /* Set the size of the text */
+  
+    /* Font weight */
+    font-weight: bold; /* Set the thickness of the text (bold, normal, etc.) */
+  
+    /* Text alignment */
+    text-align: center; /* Align text (left, center, right, justify) */
+  
+    /* Text decoration */
+    text-decoration: underline; /* Add text decoration (underline, line-through) */
+  
+    /* Text transform */
+    text-transform: uppercase; /* Transform text (uppercase, lowercase, capitalize) */
+  }
+  
+  /* ===== Display & Positioning ===== */
+  
+  /* Display types */
+  element {
+    display: block; /* Block element takes up full width, starts on new line */
+    /* Other options: inline, inline-block, flex, grid */
+  }
+  
+  /* Positioning */
+  element {
+    position: relative; /* Positions relative to its normal position */
+    /* Other options: absolute, fixed, sticky */
+    top: 10px; /* Moves element down from its original position */
+    left: 10px; /* Moves element right from its original position */
+  }
+  
+  /* Float */
+  element {
+    float: left; /* Floats element to the left, allowing text to wrap around */
+    /* Other options: right, none */
+  }
+  
+  /* Clear float */
+  element {
+    clear: both; /* Clears the float, preventing elements from wrapping around */
+    /* Other options: left, right, none */
+  }
+  
+  /* ===== Flexbox ===== */
+  
+  /* Flexbox layout for aligning and distributing space */
+  .container {
+    display: flex; /* Enable flex layout for children elements */
+    justify-content: center; /* Align items horizontally (centered) */
+    /* Other options: flex-start, flex-end, space-between, space-around */
+    align-items: center; /* Align items vertically (centered) */
+    /* Other options: flex-start, flex-end, stretch */
+  }
+  
+  .item {
+    flex: 1; /* Flex item grows to fill available space */
+    /* Other options: flex-grow, flex-shrink, flex-basis */
+  }
+  
+  /* ===== Grid ===== */
+  
+  /* Grid layout for creating complex layouts with rows and columns */
+  .container {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Define 3 equal columns */
+    grid-gap: 10px; /* Space between grid items */
+  }
+  
+  .item {
+    grid-column: span 2; /* Make the item span 2 columns */
+    /* Other options: grid-row, grid-area */
+  }
+  
+  /* ===== Pseudo-classes ===== */
+  
+  /* Target element states like hover, focus, active */
+  element:hover {
+    /* Apply styles when the element is hovered over */
+    background-color: #ddd;
+  }
+  
+  element:focus {
+    /* Apply styles when the element is focused (e.g., clicked or tabbed into) */
+    outline: 2px solid #333;
+  }
+  
+  element:active {
+    /* Apply styles when the element is active (e.g., clicked) */
+    background-color: #bbb;
+  }
+  
+  /* ===== Pseudo-elements ===== */
+  
+  /* Add content before or after elements */
+  
+  /* ::before */
+  element::before {
+    content: 'Prefix '; /* Insert content before the element */
+    /* This pseudo-element is often used for decorative purposes, such as icons or labels. */
+    color: #888; /* Styling the pseudo-element */
+  }
+  
+  /* ::after */
+  element::after {
+    content: ' Suffix'; /* Insert content after the element */
+    /* Like ::before, this is commonly used for adding additional content. */
+    color: #888; /* Styling the pseudo-element */
+  }
+  
+  /* ===== Media Queries ===== */
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    element {
+      /* Apply styles for screens smaller than 768px */
+      font-size: 14px;
+    }
+  }
+  
